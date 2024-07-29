@@ -26,6 +26,48 @@ function getHumanChoice() {
   choice = choice.toLowerCase();
   return choice;
 }
+// rounds and declaring scores
+
+let humanScore = 0;
+let computerScore = 0;
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerchoice();
+
+
+
+function playRound(humanChoice, computerChoice) {
+    if(humanChoice == 'rock' && computerChoice == 'paper') {
+      console.log("Comp wins")
+      computerScore++;
+    };
+    if(humanChoice == 'rock' && computerChoice === 'scissor'){
+      console.log("You win")
+      humanScore++;
+    }
+    if(humanChoice == 'paper' && computerChoice === 'scissor'){
+      console.log("Comp wins")
+      computerScore++;
+    }
+    if(humanChoice == 'paper' && computerChoice === 'rock'){
+      console.log("You win")
+      humanScore++;
+    }
+    if(humanChoice == 'scissor' && computerChoice === 'paper'){
+      console.log("You win")
+      humanScore++;
+    }
+    if(humanChoice == 'scissor' && computerChoice === 'rock'){
+      console.log("Comp wins")
+      computerScore++;
+    }
+    else{
+      console.log("tie")
+    };
+
+  }
+  
+
+  
 
 
 
